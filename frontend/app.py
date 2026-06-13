@@ -153,6 +153,8 @@ with tab2:
 
         with st.spinner("Reviewing code..."):
 
+            st.write(review_diff)
+
             response = requests.post(
                 f"{BASE_URL}/review",
                 json={
@@ -162,6 +164,7 @@ with tab2:
 
             if response.status_code != 200:
                 st.error("Backend error.")
+
                 st.stop()
 
             data = response.json()
