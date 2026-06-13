@@ -155,13 +155,18 @@ with tab2:
 
             st.write(review_diff)
 
+            payload = {
+                "diff": str(review_diff or "").strip()
+            }
+
+            st.write("DEBUG PAYLOAD:", payload)
+
             response = requests.post(
                 f"{BASE_URL}/review",
-                json={
-                    "diff": review_diff
-                }
+                json=payload,
+                headers={"Content-Type": "application/json"},
+                timeout=60
             )
-
             if response.status_code != 200:
                 st.error("Backend error.")
 
