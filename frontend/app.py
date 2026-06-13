@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-BASE_URL = "https://ai-commit-messager.onrender.com/"
+BASE_URL = "https://ai-commit-messager.onrender.com"
 
 st.set_page_config(
     page_title="AI Git Assistant",
