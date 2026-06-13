@@ -18,10 +18,19 @@ from backend.utils.diff_parser import (
     diff_stats,
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="AI Git Assistant"
 )
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def health():
