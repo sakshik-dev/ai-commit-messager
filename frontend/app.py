@@ -152,9 +152,6 @@ with tab2:
             st.stop()
 
         with st.spinner("Reviewing code..."):
-
-            st.write(review_diff)
-
             payload = {
                 "diff": str(review_diff or "").strip()
             }
