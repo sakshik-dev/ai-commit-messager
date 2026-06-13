@@ -46,7 +46,7 @@ with tab1:
             )
 
             st.write(response.status_code)
-            st.write(response.text)
+            # st.write(response.text)
 
             if response.status_code != 200:
                 st.error("Backend error.")
