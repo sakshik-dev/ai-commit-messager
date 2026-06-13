@@ -159,8 +159,6 @@ with tab2:
                 "diff": str(review_diff or "").strip()
             }
 
-            st.write("DEBUG PAYLOAD:", payload)
-
             response = requests.post(
                 f"{BASE_URL}/review",
                 json=payload,
