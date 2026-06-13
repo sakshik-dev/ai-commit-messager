@@ -41,8 +41,12 @@ with tab1:
 
             response = requests.post(
                 f"{BASE_URL}/generate",
-                json={"diff": diff}
+                json={"diff": diff},
+                timeout=60
             )
+
+            st.write(response.status_code)
+            st.write(response.text)
 
             if response.status_code != 200:
                 st.error("Backend error.")
