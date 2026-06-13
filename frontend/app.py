@@ -10,10 +10,7 @@ st.set_page_config(
 )
 
 st.title("🤖 AI Git Assistant")
-st.caption(
-    "Generate commit messages, PR descriptions, release notes and developer-focused code reviews."
-)
-
+st.caption("Paste a git diff → get commit message, PR, review & secrets")
 tab1, tab2 = st.tabs(
     ["📝 Commit Generator", "🔍 Code Review"]
 )
